@@ -32,10 +32,8 @@ function cargarJSON() {
 
 function cargarREST() {
     fetch('https://picsum.photos/list')
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
             let html = '';
             data.forEach(imagen => {
                 html += `
